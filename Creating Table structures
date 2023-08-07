@@ -1,0 +1,60 @@
+CREATE TABLE Customer
+(
+	CustomerID int IDENTITY(1, 1) PRIMARY KEY,
+	FirstName varchar(255) NOT NULL ,
+	LastName varchar(255) NOT NULL,
+	DOB date NOT NULL ,
+	Email varchar(255) NOT NULL ,
+	Password varchar(255) NOT NULL,
+	Contact varchar(255) NOT NULL 
+);
+
+CREATE TABLE Orders
+(
+	OrderID int IDENTITY(1, 1) PRIMARY KEY,
+	CustomerID int FOREIGN KEY REFERENCES Customer(CustomerID) NOT NULL,
+	OrderDate date NOT NULL,
+	Total_amt int not null
+);
+CREATE TABLE Category
+(
+	CategoryID int IDENTITY(1, 1) PRIMARY KEY,
+	CategoryName varchar(255) NOT NULL
+);
+
+
+CREATE TABLE Product
+(
+	ProductID int IDENTITY(1, 1) PRIMARY KEY,
+	ProductName varchar(255) NOT NULL,
+	CategoryID int FOREIGN KEY REFERENCES Category(CategoryID) NOT NULL,
+	Price int not null,
+	Stock_quantity int not null
+);
+
+CREATE TABLE OrderedProduct
+(
+	OrderedProductID int IDENTITY(1, 1) PRIMARY KEY,
+	OrderID int FOREIGN KEY REFERENCES Orders(OrderID) NOT NULL,
+	ProductID int FOREIGN KEY REFERENCES Product(ProductID),
+	Quantity int NOT NULL,
+	UnitPrice int not null,
+	SubTotal int not null
+);
+
+CREATE TABLE Payment
+(	PaymentID int IDENTITY(1, 1)  PRIMARY KEY,
+	OrderID int FOREIGN KEY REFERENCES Orders(OrderID) NOT NULL,
+	PaymentDate DATE not null,
+	PaymentMethod varchar not null,
+	Amount int not null
+);
+
+CREATE TABLE Shipping
+(	ShippingID int identity(1,1) PRIMARY KEY,
+	OrderID int FOREIGN KEY REFERENCES Orders(OrderID) NOT NULL,
+	ShippingDate date not null,
+	ShippingAddress varchar(255) not null,
+	City varchar (50) not null,
+	Country varchar (50)
+);
