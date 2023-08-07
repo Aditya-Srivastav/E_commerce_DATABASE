@@ -1,0 +1,85 @@
+/*   02   DATA POPULATION*/
+		/* CUSTOMER TABLE */
+			Select * from Customer;
+Insert Into Customers Values
+
+('Aamir','Abbasi','1998-03-29','Aamir@Whatmobile.Com.Pk','92Eac13CiJz','03008564501'),
+('Aamir','Raees','1994-07-23','aamir.rais150@gmail.com','yEN[J(78','03007365250'),
+('Abbas','Raza','1991-06-07','Abbas_raza94@Hotmail.Com','hLL77dq1_*','03235536781'),
+('Abdul','Majid','1996-05-03','Kamranwahid2032@Ymail.Com','(2R_N,yzx+g|','03212800124'),
+('Abdul','Saboor','1998-05-06','ubaidaslam1988@gmail.com','|0.6rgsO&c','03366840140'),
+('Abdul','Moiz','1990-12-03','Abdulmoizmohsin@Gmail.Com','.VsH43r*E)','03005901176'),
+('Dua','Abbas','1995-08-18','DuaAbbas@gmail.com','JZR-Fe1PG','03346953222');
+			
+		/* ORDERS INSERT*/	
+			Select * from Orders;
+	
+Insert Into Orders
+Values
+
+('3','2014-02-21','4000'),
+('4','2013-04-29','2000'),
+('5','2013-06-05','1500'),
+('6','2015-03-14','1000'),
+('7','2010-09-21','2500'),
+('8','2012-07-22','1000'),
+('9','2012-09-03','3500');
+
+Select * from Category;
+
+Insert Into Category
+values
+('Android Smart TV Box/Air Mouse'),
+('Attendance Machine'),
+('Barcode Scanner/Thermal Receipt Printer'),
+('Bluetooth Handsfree'),
+('Bluetooth Headphone'),
+('Bluetooth Speakers'),
+('Power Bank');
+
+Select * from Product;
+
+Insert Into Product
+values
+('Air Mouse C120 for Android and Smart TV','1','4000','200'),
+('ZKTECO live 20R usb figerprint reader','2','445','300'),
+('Thermal Printer Main Board PCB KIT RS232+USB 2port','3','1255','250'),
+('LG TONE ultra HBS 800 bluetooth handsfree','4','4100','90'),
+('BEATS BLUETOOTH WIRELESS SOLO3 HEADPHONE','5','3000','50'),
+('Bose SoundlLink Mini Boluetooth Wireless Speaker small box','6','2000','30'),
+('Romoss sense 4p 10400Mah Power bank for smart phones','6','2300','1800');
+
+
+
+Select * from Payment;
+Insert Into Payment
+values
+ (1,'2023-07-01','c',3000),
+ (2,'2023-07-12','c',15000),
+ (3,'2023-08-20','o',4000),
+ (4,'2023-08-23','c',5400),
+ (5,'2023-08-28','o',2000),
+ (6,'2023-09-12','o',2000),
+ (7,'2023-09-23','o',2000);
+
+ Select * from shipping;
+ insert into shipping
+ values
+ (1,'2023-07-02','jankipuram','Lucknow','India'),
+ (2,'2023-07-23','gomtinagar','Lucknow','India'),
+ (3,'2023-08-23','B.K.T.','Lucknow','India'),
+ (4,'2023-08-25','jankipuram','Lucknow','India'),
+ (5,'2023-08-30','mansarovar','Jaipur','India'),
+ (6,'2023-09-18','mansarovar','Jaipur','India'),
+ (7,'2023-08-23','civil line','Jaipur','India');
+
+ Select * from OrderedProduct;
+ insert into OrderedProduct
+ values
+(1,8,15,2000,30000),
+(2,9,5,3000,15000),
+(3,10,16,2500,40000),
+(4,11,36,1500,54000),
+(5,12,20,1000,20000),
+(6,13,18,1500,27000),
+(7,14,12,1600,19200);
