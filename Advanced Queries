@@ -1,0 +1,14 @@
+--/4.advanced queries/
+
+--/finding product with highest sale/
+
+select ProductID from OrderedProduct where Quantity=(select max(Quantity) from OrderedProduct);
+
+--/calculate total revenue for a specific time period/
+
+select sum(UnitPrice*Quantity) as Total_Revenue from OrderedProduct join Orders on  Orders.OrderID = OrderedProduct.OrderID  where OrderDate>='01-07-2023' and OrderDate<='03-08-2023';
+
+--/identify most active customer/
+
+select CustomerID,count(*) as Num_Purchase from Orders group by CustomerID order by num_purchase desc;
+
